@@ -3,6 +3,8 @@
 namespace Wechat\Lib;
 
 use CURLFile;
+use think\Cache;
+use think\Log;
 
 /**
  * 微信接口通用类
@@ -253,7 +255,7 @@ class WechatBasic {
      * @return boolean
      */
     static public function removeCache($cachename) {
-        return Cache::del($cachename);
+        return Cache::rm($cachename);
     }
 
     /**
@@ -262,7 +264,7 @@ class WechatBasic {
      * @param type $type
      */
     static public function log($msg, $type = 'MSG') {
-        Cache::put($type . ' - ' . $msg);
+        Log::write($type . ' - ' . $msg);
     }
 
 }
