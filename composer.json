@@ -1,6 +1,6 @@
 {
     "type": "project",
-    "name": "zoujingli/wechat-php-sdk",
+    "name": "jesse-liutao/wechat-php-sdk",
     "homepage": "https://www.ctolog.com",
     "description": "WeChat development of SDK",
     "license": "MIT",
