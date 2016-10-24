@@ -2,7 +2,7 @@
 
 namespace Wechat;
 
-use Wechat\Lib\Cache;
+use think\Cache;
 
 /**
  * 微信SDK加载器
@@ -39,7 +39,7 @@ class Loader {
         /* 检测并应用配置参数 */
         !empty($config) && self::$config = $config;
         /* 内置类库初始化配置 */
-        !empty(self::$config['cachepath']) && Cache::$cachepath = self::$config['cachepath'];
+        //!empty(self::$config['cachepath']) && Cache::$cachepath = self::$config['cachepath'];
         if (empty(self::$config['component_verify_ticket'])) {
             self::$config['component_verify_ticket'] = Cache::get('component_verify_ticket');
         }
